@@ -1,0 +1,12 @@
+ifndef __ALGORITHM_INC__
+__ALGORITHM_INC__ EQU 1
+
+MinOfTwo	PROTO STDCALL, 
+	num1: INT32, 
+	num2: INT32
+
+SwapByte	PROTO STDCALL, 
+	lpMem1: LPBYTE, 
+	lpMem2: LPBYTE
+
+endif
