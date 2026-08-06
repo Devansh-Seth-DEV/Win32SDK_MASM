@@ -13,10 +13,149 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\console">
+      <UniqueIdentifier>{9dcfb50d-5da6-4958-85b3-14bc96b63b54}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\string">
+      <UniqueIdentifier>{f7e4c4ae-ce4d-4d9c-98f2-0172361ee2dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\formatting">
+      <UniqueIdentifier>{737c5cfc-e527-473e-86ae-72d79f386da1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\algorithm">
+      <UniqueIdentifier>{a5faa769-edf5-4f3e-a30d-501e4c04493a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\include">
+      <UniqueIdentifier>{f571f892-8820-46d0-8b91-c279b2782c24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="build">
+      <UniqueIdentifier>{9ca09f92-deb2-4af9-b43c-7f0887352fb4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <MASM Include="..\SDK\lib\win32sdk.asm">
-      <Filter>Source Files</Filter>
+    <MASM Include="console\console.asm">
+      <Filter>Source Files\console</Filter>
     </MASM>
+    <MASM Include="console\PrintCharA.asm">
+      <Filter>Source Files\console</Filter>
+    </MASM>
+    <MASM Include="console\PrintError.asm">
+      <Filter>Source Files\console</Filter>
+    </MASM>
+    <MASM Include="console\PrintInt.asm">
+      <Filter>Source Files\console</Filter>
+    </MASM>
+    <MASM Include="console\PrintMemAddress.asm">
+      <Filter>Source Files\console</Filter>
+    </MASM>
+    <MASM Include="console\PrintNewLine.asm">
+      <Filter>Source Files\console</Filter>
+    </MASM>
+    <MASM Include="console\PrintStringA.asm">
+      <Filter>Source Files\console</Filter>
+    </MASM>
+    <MASM Include="console\PrintUInt.asm">
+      <Filter>Source Files\console</Filter>
+    </MASM>
+    <MASM Include="console\PrintUIntHex.asm">
+      <Filter>Source Files\console</Filter>
+    </MASM>
+    <MASM Include="console\ReadCharA.asm">
+      <Filter>Source Files\console</Filter>
+    </MASM>
+    <MASM Include="console\ReadLineA.asm">
+      <Filter>Source Files\console</Filter>
+    </MASM>
+    <MASM Include="console\ReadStringA.asm">
+      <Filter>Source Files\console</Filter>
+    </MASM>
+    <MASM Include="console\ReadUInt.asm">
+      <Filter>Source Files\console</Filter>
+    </MASM>
+    <MASM Include="formatting\IntToString.asm">
+      <Filter>Source Files\formatting</Filter>
+    </MASM>
+    <MASM Include="formatting\StringToUInt.asm">
+      <Filter>Source Files\formatting</Filter>
+    </MASM>
+    <MASM Include="formatting\UIntToFixedHex.asm">
+      <Filter>Source Files\formatting</Filter>
+    </MASM>
+    <MASM Include="formatting\UIntToHex.asm">
+      <Filter>Source Files\formatting</Filter>
+    </MASM>
+    <MASM Include="formatting\UIntToString.asm">
+      <Filter>Source Files\formatting</Filter>
+    </MASM>
+    <MASM Include="algorithm\MinOfTwo.asm">
+      <Filter>Source Files\algorithm</Filter>
+    </MASM>
+    <MASM Include="algorithm\SwapByte.asm">
+      <Filter>Source Files\algorithm</Filter>
+    </MASM>
+    <MASM Include="string\GetStringLengthA.asm">
+      <Filter>Source Files\string</Filter>
+    </MASM>
+    <MASM Include="string\ReverseStringA.asm">
+      <Filter>Source Files\string</Filter>
+    </MASM>
+    <MASM Include="console\ConsoleInit.asm">
+      <Filter>Source Files\console</Filter>
+    </MASM>
+    <MASM Include="console\ConsoleLoadInputInBuffer.asm">
+      <Filter>Source Files\console</Filter>
+    </MASM>
+    <MASM Include="console\ConsoleCheckOutputBufferOverflowPossible.asm">
+      <Filter>Source Files\console</Filter>
+    </MASM>
+    <MASM Include="console\ConsoleFlushOutputBuffer.asm">
+      <Filter>Source Files\console</Filter>
+    </MASM>
+    <MASM Include="console\ConsoleFlushOutputBufferIfNeeded.asm">
+      <Filter>Source Files\console</Filter>
+    </MASM>
+    <MASM Include="console\ConsoleLoadOutputInBuffer.asm">
+      <Filter>Source Files\console</Filter>
+    </MASM>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="include\algorithm.inc">
+      <Filter>Header Files\include</Filter>
+    </None>
+    <None Include="include\console.inc">
+      <Filter>Header Files\include</Filter>
+    </None>
+    <None Include="include\formatting.inc">
+      <Filter>Header Files\include</Filter>
+    </None>
+    <None Include="include\kernel32.inc">
+      <Filter>Header Files\include</Filter>
+    </None>
+    <None Include="include\limits.inc">
+      <Filter>Header Files\include</Filter>
+    </None>
+    <None Include="include\stderr.inc">
+      <Filter>Header Files\include</Filter>
+    </None>
+    <None Include="include\string.inc">
+      <Filter>Header Files\include</Filter>
+    </None>
+    <None Include="include\user32.inc">
+      <Filter>Header Files\include</Filter>
+    </None>
+    <None Include="include\win32sdk.inc">
+      <Filter>Header Files\include</Filter>
+    </None>
+    <None Include="include\windows.inc">
+      <Filter>Header Files\include</Filter>
+    </None>
+    <None Include="include\console_private.inc">
+      <Filter>Header Files\include</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="build\win32sdk.lib">
+      <Filter>build</Filter>
+    </Library>
   </ItemGroup>
 </Project>

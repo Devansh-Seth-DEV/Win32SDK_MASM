@@ -19,7 +19,52 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <MASM Include="..\SDK\lib\win32sdk.asm" />
+    <MASM Include="algorithm\MinOfTwo.asm" />
+    <MASM Include="algorithm\SwapByte.asm" />
+    <MASM Include="console\console.asm" />
+    <MASM Include="console\ConsoleCheckOutputBufferOverflowPossible.asm" />
+    <MASM Include="console\ConsoleFlushOutputBuffer.asm" />
+    <MASM Include="console\ConsoleFlushOutputBufferIfNeeded.asm" />
+    <MASM Include="console\ConsoleInit.asm" />
+    <MASM Include="console\ConsoleLoadInputInBuffer.asm" />
+    <MASM Include="console\ConsoleLoadOutputInBuffer.asm" />
+    <MASM Include="console\PrintCharA.asm" />
+    <MASM Include="console\PrintError.asm" />
+    <MASM Include="console\PrintInt.asm" />
+    <MASM Include="console\PrintMemAddress.asm" />
+    <MASM Include="console\PrintNewLine.asm" />
+    <MASM Include="console\PrintStringA.asm" />
+    <MASM Include="console\PrintUInt.asm" />
+    <MASM Include="console\PrintUIntHex.asm" />
+    <MASM Include="console\ReadCharA.asm" />
+    <MASM Include="console\ReadLineA.asm" />
+    <MASM Include="console\ReadStringA.asm" />
+    <MASM Include="console\ReadUInt.asm" />
+    <MASM Include="formatting\IntToString.asm" />
+    <MASM Include="formatting\StringToUInt.asm" />
+    <MASM Include="formatting\UIntToFixedHex.asm" />
+    <MASM Include="formatting\UIntToHex.asm" />
+    <MASM Include="formatting\UIntToString.asm" />
+    <MASM Include="string\GetStringLengthA.asm" />
+    <MASM Include="string\ReverseStringA.asm" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="include\algorithm.inc" />
+    <None Include="include\console.inc" />
+    <None Include="include\console_private.inc" />
+    <None Include="include\formatting.inc" />
+    <None Include="include\kernel32.inc" />
+    <None Include="include\limits.inc" />
+    <None Include="include\stderr.inc" />
+    <None Include="include\string.inc" />
+    <None Include="include\user32.inc" />
+    <None Include="include\win32sdk.inc" />
+    <None Include="include\windows.inc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="build\win32sdk.lib">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </Library>
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>18.0</VCProjectVersion>
@@ -75,7 +120,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>$(SolutionDir)SDK\lib\</OutDir>
+    <OutDir>$(SolutionDir)Win32SDK\build\</OutDir>
     <TargetName>win32sdk</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -97,7 +142,7 @@
       <EnableSegmentHeap>true</EnableSegmentHeap>
     </Manifest>
     <MASM>
-      <IncludePaths>$(SolutionDir)SDK\include</IncludePaths>
+      <IncludePaths>$(SolutionDir)Win32SDK\include</IncludePaths>
     </MASM>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
