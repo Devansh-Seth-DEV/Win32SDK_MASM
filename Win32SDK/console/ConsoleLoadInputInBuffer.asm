@@ -52,8 +52,10 @@ LoadBuffer:
 
 	; TODO: Re-read until character is pressed except CR,LF
 	mov eax, DWORD PTR [ebp-4]		; EAX = nNumberOfCharsRead
-	test eax, eax						; nNumberOfCharsRead <= 2, read failed
-	jz ReadFailed
+	;test eax, eax						; nNumberOfCharsRead <= 2, read failed
+	;jz ReadFailed
+	cmp eax, 2
+	jbe LoadBuffer
 
 	dec eax										; EAX -= 1 (treating EAX as 0-indexed of buffer)
 	mov ecx, OFFSET __console.stdIn.buffer		; ECX = buffer (Address of 1st char)

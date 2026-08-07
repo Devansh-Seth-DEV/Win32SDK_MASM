@@ -30,6 +30,7 @@ ReadStringA	PROC STDCALL,
 	nBufferSize:	DWORD
 
 	push ebx
+	push esi
 
 	call ConsoleLoadInputInBuffer
 
@@ -38,6 +39,7 @@ ReadStringA	PROC STDCALL,
 
 	mov edx, lpBuffer
 	xor ecx, ecx
+	xor esi, esi
 
 ; extract only one word from the line
 @@:
@@ -50,8 +52,16 @@ ReadStringA	PROC STDCALL,
 
 	mov ebx, __console.stdIn.position
 	cmp BYTE PTR [__console.stdIn.buffer+ebx], SYM_SPACE
-	je FoundSpace
+	jne StoreChar
 
+	test esi, esi
+	jnz FoundSpace
+	inc __console.stdIn.position
+	jmp @B
+
+StoreChar:
+	xor esi, esi
+	inc esi
 	mov al, BYTE PTR [__console.stdIn.buffer+ebx]
 	mov BYTE PTR [edx+ecx], al
 	
@@ -67,6 +77,7 @@ InsertNullTerminator:
 	mov eax, ecx
 
 Epilogue:
+	pop esi
 	pop ebx
 	ret
 

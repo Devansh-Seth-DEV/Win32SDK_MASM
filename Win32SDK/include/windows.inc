@@ -26,6 +26,7 @@ CR		EQU 0Dh		; Carriage Return moves cursor back to very beginning of current li
 LF		EQU 0Ah		; Line Feed moves cursor down one line, keeping in same horizontal column
 
 SYM_SPACE	EQU	20h
+SYM_TAB		EQU 09h
 
 
 ;----------------------------------------
