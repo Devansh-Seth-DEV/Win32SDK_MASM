@@ -56,6 +56,7 @@ FirstChar:
 
 HandlePlus:
 	loop NextDigit
+	jmp EndCompute
 
 NextDigit:
 	lodsb
@@ -89,9 +90,9 @@ OverflowError:
 	or eax, -1
 
 Done:
-	push edi
-	push esi
-	push ebx
+	pop edi
+	pop esi
+	pop ebx
 
 	ret
 
